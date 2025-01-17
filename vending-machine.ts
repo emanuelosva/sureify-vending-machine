@@ -40,7 +40,7 @@ export function calcCoffeePrice({
 function validateCoffeeOptionsOrThrow(options: CoffeeOptions): void {
   (Object.keys(options) as (keyof CoffeePriceComponents)[]).forEach((key) => {
     const value = options[key]!;
-    // @ts-expect-error Actually we are checking if the value is undefined
+    // @ts-expect-error "value is possible undefined" -> Actually we are checking if the value is undefined
     if (typeof coffeePriceComponents[key][value] === "undefined") {
       const validOptions = Object.keys(coffeePriceComponents[key]).join(", ");
       throw new Error(`Invalid option [${value}] for ${key}. Valid options are: ${validOptions}`);
