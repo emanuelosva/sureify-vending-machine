@@ -90,3 +90,7 @@ The current implementation requires changes in only three places if a new price 
 - Include the component in the final price calculation.
 
 While it is possible to implement a more "automatic" approach to infer or iterate over coffeePriceComponents, this would add unnecessary complexity and reduce code readability.
+
+## Live preview
+
+**You can see the vending machine working here**: [Cofee Vending Machine](https://sureify-vending-machine.vercel.app/)
